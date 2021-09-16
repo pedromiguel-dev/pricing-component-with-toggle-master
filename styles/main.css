@@ -93,6 +93,7 @@
   height: -moz-max-content;
   height: max-content;
   max-width: 400px;
+  margin-bottom: 60px;
 }
 
 .header__title {
@@ -122,6 +123,83 @@
   grid-area: 1/2;
 }
 
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main__wrapper {
+  width: 100%;
+  padding: 0px 20px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(200px, 300px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+}
+
+.main__card {
+  background-color: white;
+  max-width: 375px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__title {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: var(--Grayish-Blue);
+}
+
+.main__money {
+  margin: 20px 0px;
+  color: var(--Dark-Grayish-Blue);
+  font-size: 50px;
+}
+
+.main__list {
+  width: 80%;
+  margin-bottom: 20px;
+  list-style: none;
+  border-top: solid 1px var(--Grayish-Blue);
+}
+
+.main__get {
+  padding: 10px 0px;
+  border-bottom: solid 1px var(--Grayish-Blue);
+}
+
+.main__button {
+  margin-bottom: 30px;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-image: var(--Linear-Gradient);
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -133,9 +211,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 60px;
   background-color: var(--Very-Light-Grayish-Blue);
   background-image: url("../images/bg-top.svg");
@@ -143,7 +225,7 @@ body {
   background-size: 230px;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 

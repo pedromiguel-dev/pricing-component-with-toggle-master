@@ -1,7 +1,8 @@
 @import "./abstracts/color";
 @import "./utils/mixins";
-@import "./modules/_button";
+@import "./modules/btn";
 @import "./modules/header";
+@import "./modules/card";
 
 //fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
@@ -16,7 +17,8 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 60px;
   background-color: var(--Very-Light-Grayish-Blue);
   background-image: url("../images/bg-top.svg");
@@ -24,7 +26,7 @@ body {
   background-size: 230px;
   background-repeat: no-repeat;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
 
   @include for-size(tablet) {

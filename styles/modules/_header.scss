@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: max-content;
+  max-width: 400px;
+  &__title {
+    margin-bottom: 20px;
+    color: var(--Grayish-Blue);
+  }
+  &__wrapper {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__action {
+    place-self: center;
+    font-size: 15px;
+    color: var(--Light-Grayish-Blue);
+  }
+  &__button {
+    place-self: center;
+    grid-area: 1/2;
+  }
+}

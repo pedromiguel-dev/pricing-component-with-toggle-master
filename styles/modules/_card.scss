@@ -1,13 +1,22 @@
 .main {
-  min-height: 100vh;
+  max-height: 100vh;
   width: 100%;
   &__wrapper {
-    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
     padding: 0px 20px;
     height: max-content;
     display: grid;
     justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+    gap: 1rem;
+
+    @include for-size(desk) {
+      gap: 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "one two three";
+    }
   }
   &__card {
     text-align: center;
@@ -16,10 +25,39 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    max-width: 375px;
+    max-width: 370px;
+    height: 390px;
+    align-self: center;
     padding: 30px 0px;
     border-radius: 10px;
-    box-shadow: 0px 0px 40px -21px var(--Grayish-Blue);
+    box-shadow: 0px 0px 40px -30px var(--Grayish-Blue);
+
+    &--negative {
+      background-color: transparent;
+      background-image: var(--Linear-Gradient);
+      box-shadow: 0px 0px 40px -20px var(--Grayish-Blue);
+    }
+    @include for-size(desk) {
+      &--negative {
+        height: 430px;
+        z-index: 1;
+        align-self: center;
+      }
+      &.one {
+        grid-column: one;
+        grid-row: 1;
+        transform: translateX(20px);
+      }
+      &.two {
+        grid-column: two;
+        grid-row: 1;
+      }
+      &.three {
+        grid-column: three;
+        grid-row: 1;
+        transform: translateX(-20px);
+      }
+    }
   }
   &__title {
     font-size: 15px;
@@ -35,11 +73,11 @@
     margin-bottom: 20px;
     list-style: none;
     border-top: solid 1px var(--Light-Grayish-Blue);
+    color: var(--Grayish-Blue);
   }
   &__get {
     padding: 10px 0px;
     font-size: 13px;
-    color: var(--Grayish-Blue);
     border-bottom: solid 1px var(--Light-Grayish-Blue);
   }
   &__button {
@@ -53,5 +91,18 @@
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
+    &--negative {
+      background-image: none;
+      background-color: white;
+      & p {
+        background-image: var(--Linear-Gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
+}
+.negative-colors {
+  color: white;
 }

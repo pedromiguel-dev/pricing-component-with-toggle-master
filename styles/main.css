@@ -17,6 +17,12 @@
   width: 3.75rem;
   height: 2.125rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__button:hover {
+  opacity: 0.7;
 }
 
 .header__button input {
@@ -130,7 +136,6 @@
 
 .main__wrapper {
   max-width: 1020px;
-  margin: 0 auto;
   padding: 0px 20px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -148,8 +153,9 @@
   gap: 1rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main__wrapper {
+    margin: 0 auto;
     gap: 0;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -190,7 +196,7 @@
           box-shadow: 0px 0px 40px -20px var(--Grayish-Blue);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .main__card--negative {
     height: 430px;
     z-index: 1;

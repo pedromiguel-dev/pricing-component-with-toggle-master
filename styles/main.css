@@ -5,6 +5,7 @@
     hsl(236, 72%, 79%),
     hsl(237, 63%, 64%)
   );
+  --border: hsl(237, 63%, 64%);
   --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
   --Light-Grayish-Blue: hsl(234, 14%, 74%);
   --Grayish-Blue: hsl(233, 13%, 49%);
@@ -259,8 +260,11 @@
   font-size: 13px;
   font-weight: 700;
   color: white;
+  border: white 1px solid;
   text-transform: uppercase;
   letter-spacing: 1px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .main__button--negative {
@@ -277,6 +281,27 @@
 
 .negative-colors {
   color: white;
+}
+
+.main__button:hover {
+  background: none;
+  border: var(--border) 1px solid;
+  background-image: var(--Linear-Gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__button--negative:hover {
+  background: none;
+  border: white 1px solid;
+}
+
+.main__button--negative:hover p {
+  background-image: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: white;
 }
 
 * {

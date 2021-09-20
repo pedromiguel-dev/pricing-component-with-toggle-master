@@ -89,8 +89,10 @@
     font-size: 13px;
     font-weight: 700;
     color: white;
+    border: white 1px solid;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: 0.3s all ease;
     &--negative {
       background-image: none;
       background-color: white;
@@ -105,4 +107,24 @@
 }
 .negative-colors {
   color: white;
+}
+
+.main__button:hover {
+  background: none;
+  border: var(--border) 1px solid;
+  background-image: var(--Linear-Gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__button--negative:hover {
+  background: none;
+  border: white 1px solid;
+  & p {
+    background-image: none;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: white;
+  }
 }
